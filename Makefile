@@ -2,7 +2,7 @@
 
 -include user.make
 
-build ?= release
+build ?= debug
 
 prefix ?= /usr/local
 bindir ?= $(prefix)/bin
@@ -24,7 +24,7 @@ ifeq "$(CC)" "clang"
 endif
 
 ifeq "$(shell uname)" "Linux"
-  HAVE_READLINE := yes
+  HAVE_READLINE := no
 endif
 
 ifeq "$(build)" "debug"
